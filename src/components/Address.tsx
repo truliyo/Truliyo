@@ -36,7 +36,7 @@ const Address = () => {
   const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.0016930083334!2d77.03683257617283!3d28.41920577578184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d0d689de3c580d9%3A0x44fc6d4bc720214!2sTruliyo%20Digital!5e0!3m2!1sen!2sin!4v1756888962616!5m2!1sen!2sin";
 
   return (
-    <section id="address" className="py-20 bg-muted/30 overflow-hidden">
+    <section id="address" className="py-20 bg-muted/30 overflow-hidden" style={{ backgroundImage: "url('/testimonial.png')" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={titleRef} className={`text-center mb-16 transition-all duration-700 ${titleVisible ? 'animate-fade-in' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Locations</h2>
@@ -91,14 +91,7 @@ const Address = () => {
                     {office.hours}
                   </p>
                 </div>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full mt-4 border-primary text-primary hover:bg-primary hover:text-white"
-                >
-                  <Navigation className="h-4 w-4 mr-2" />
-                  Get Directions
-                </Button>
+                
               </CardContent>
             </Card>
           ))}
