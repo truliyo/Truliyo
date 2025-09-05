@@ -72,14 +72,14 @@ const Media = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Button 
+                  {/* <Button 
                     size="sm" 
                     className="bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30"
                     variant="outline"
                   >
                     <Play className="h-4 w-4 mr-2" />
                     View Case Study
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
               <CardContent className="p-6">

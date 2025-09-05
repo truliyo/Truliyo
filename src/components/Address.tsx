@@ -9,25 +9,22 @@ const Address = () => {
   
   const offices = [
     {
-      city: "New York",
-      address: "123 Business Ave, Suite 100\nNew York, NY 10001",
-      phone: "+1 (555) 123-4567",
-      email: "ny@TruliyoDigital.com",
-      hours: "Mon-Fri: 9:00 AM - 6:00 PM"
+      city: "India",
+      address: "Unit No. 620, JMD Megapolis, Sector 48, Gurgaon, Haryana 122018",
+      
+      hours: "Mon-Sat: 10:00 AM - 6:00 PM"
     },
     {
-      city: "Los Angeles",
-      address: "456 Innovation Blvd, Floor 5\nLos Angeles, CA 90028",
-      phone: "+1 (555) 987-6543",
-      email: "la@TruliyoDigital.com",
-      hours: "Mon-Fri: 8:00 AM - 5:00 PM"
+      city: "USA",
+      address: "2885 Sanford Avenue Southwest,  Suite 37956 , Grandville, Michigan 49418",
+      
+      hours: "Mon-Sat: 10:30 AM - 7:30 PM"
     },
     {
-      city: "Chicago",
-      address: "789 Marketing Way, Suite 200\nChicago, IL 60601",
-      phone: "+1 (555) 456-7890",
-      email: "chicago@TruliyoDigital.com",
-      hours: "Mon-Fri: 9:00 AM - 6:00 PM"
+      city: "Canada",
+      address: "13750 100 Avenue Unit 3709 Surrey BC V3T0L5",
+     
+      hours: "Mon-Sat: 9:00 AM - 6:00 PM"
     }
   ];
 
@@ -67,24 +64,8 @@ const Address = () => {
                     {office.address}
                   </p>
                 </div>
-                <div className="flex items-center">
-                  <Phone className="h-4 w-4 mr-2 text-muted-foreground" />
-                  <a 
-                    href={`tel:${office.phone.replace(/[^\d+]/g, '')}`}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {office.phone}
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="h-4 w-4 mr-2 text-muted-foreground" />
-                  <a 
-                    href={`mailto:${office.email}`}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {office.email}
-                  </a>
-                </div>
+                
+                
                 <div className="flex items-center">
                   <Clock className="h-4 w-4 mr-2 text-muted-foreground" />
                   <p className="text-sm text-muted-foreground">
