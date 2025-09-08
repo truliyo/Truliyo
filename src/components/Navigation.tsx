@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-ezgif.com-optiwebp.webp";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navigation = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsOpen(false);
   };
@@ -28,11 +29,13 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              TruliyoDigital
-            </h1>
+            <img
+              src={logo}
+              alt="logo"
+              className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain"
+            />
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -50,8 +53,8 @@ const Navigation = () => {
           </div>
 
           <div className="hidden md:block">
-            <Button 
-              onClick={() => scrollToSection('#contact')}
+            <Button
+              onClick={() => scrollToSection("#contact")}
               className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 hover:shadow-glow"
             >
               Get Started
@@ -65,7 +68,11 @@ const Navigation = () => {
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -84,8 +91,8 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <Button 
-              onClick={() => scrollToSection('#contact')}
+            <Button
+              onClick={() => scrollToSection("#contact")}
               className="w-full mt-4 bg-gradient-primary hover:opacity-90 transition-opacity"
             >
               Get Started

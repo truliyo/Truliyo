@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import image1 from "@/assets/profile-1.jpg";
-import image2 from "@/assets/profile-2.jpg";
+import image1 from "@/assets/pf-1.jpg";
+import image2 from "@/assets/pf-2.jpg";
+import image3 from "@/assets/pf-3.jpg";
+import image4 from "@/assets/pf-4.jpg";
 
 interface Testimonial {
   id: number;
@@ -16,31 +18,31 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "John Doe",
+    name: "Naveen Bhatia",
     feedback: "TruliyoDigital transformed our online presence. Highly recommend!",
     rating: 5,
     image: image1,
   },
   {
     id: 2,
-    name: "Sarah Smith",
+    name: "Kavita Sharma",
     feedback: "Professional team with amazing results. Our sales increased a lot!",
     rating: 4,
     image: image2,
   },
   {
     id: 3,
-    name: "Michael Lee",
+    name: "Raj Patel",
     feedback: "Great experience, they understood our needs perfectly.",
     rating: 5,
-    image: image1,
+    image: image3,
   },
   {
     id: 4,
-    name: "Emily Davis",
+    name: "Anita Desai",
     feedback: "Outstanding service and very responsive support team!",
     rating: 5,
-    image: image2,
+    image: image4,
   },
 ];
 
@@ -92,7 +94,7 @@ const TestimonialsSection: React.FC = () => {
               >
                 <CardContent className="p-6 text-center">
                   <div className="flex justify-center mb-4">
-                    <img src={testimonial.image} alt="" width={70} height={70} className="rounded-full object-cover border-2 border-purple-500"/>
+                    <img src={testimonial.image} alt="" width={70} height={70} className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full object-cover border-2 border-grey-500 shadow-lg"/>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-800">
                     {testimonial.name}

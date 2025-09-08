@@ -1,15 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
   Youtube,
   Mail,
   Phone,
-  MapPin
+  MapPin,
 } from "lucide-react";
+import logo from "@/assets/LOGO.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -19,7 +20,7 @@ const Footer = () => {
     { name: "Portfolio", href: "#media" },
     { name: "Blog", href: "#blog" },
     { name: "Careers", href: "#career" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "#contact" },
   ];
 
   const services = [
@@ -28,7 +29,7 @@ const Footer = () => {
     "Content Creation",
     "Analytics & Reporting",
     "Email Marketing",
-    "Mobile Marketing"
+    "Mobile Marketing",
   ];
 
   const socialLinks = [
@@ -36,13 +37,13 @@ const Footer = () => {
     { icon: <Twitter className="h-5 w-5" />, href: "#", name: "Twitter" },
     { icon: <Instagram className="h-5 w-5" />, href: "#", name: "Instagram" },
     { icon: <Linkedin className="h-5 w-5" />, href: "#", name: "LinkedIn" },
-    { icon: <Youtube className="h-5 w-5" />, href: "#", name: "YouTube" }
+    { icon: <Youtube className="h-5 w-5" />, href: "#", name: "YouTube" },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -54,28 +55,44 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
-              TruliyoDigital
+              <img
+                width={90}
+                height={90}
+                src={logo}
+                alt="logo"
+                className="w-40 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain"
+              />
             </h3>
             <p className="text-background/80 mb-6">
-              We are a leading digital marketing agency helping businesses grow 
+              We are a leading digital marketing agency helping businesses grow
               through innovative strategies and data-driven solutions.
             </p>
             <div className="space-y-3">
               <div className="flex items-center text-background/80">
                 <Mail className="h-4 w-4 mr-3" />
-                <a href="mailto:hello@TruliyoDigital.com" className="hover:text-primary transition-colors">
+                <a
+                  href="mailto:hello@TruliyoDigital.com"
+                  className="hover:text-primary transition-colors"
+                >
                   contact@truliyo.com
                 </a>
               </div>
               <div className="flex items-center text-background/80">
                 <Phone className="h-4 w-4 mr-3" />
-                <a href="tel:+15551234567" className="hover:text-primary transition-colors">
+                <a
+                  href="tel:+15551234567"
+                  className="hover:text-primary transition-colors"
+                >
                   +1 (555) 123-4567
                 </a>
               </div>
               <div className="flex items-start text-background/80">
                 <MapPin className="h-4 w-4 mr-3 mt-1" />
-                <span>123 Business Ave, Suite 100<br />New York, NY 10001</span>
+                <span>
+                  123 Business Ave, Suite 100
+                  <br />
+                  New York, NY 10001
+                </span>
               </div>
             </div>
           </div>
@@ -115,7 +132,8 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Stay Updated</h4>
             <p className="text-background/80 mb-4">
-              Subscribe to our newsletter for the latest digital marketing tips and updates.
+              Subscribe to our newsletter for the latest digital marketing tips
+              and updates.
             </p>
             <div className="space-y-3">
               <Input
@@ -127,7 +145,7 @@ const Footer = () => {
                 Subscribe
               </Button>
             </div>
-            
+
             {/* Social Links */}
             <div className="mt-6">
               <p className="text-sm text-background/80 mb-3">Follow Us</p>
@@ -156,13 +174,22 @@ const Footer = () => {
               © 2023 TruliyoDigital. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-background/60 hover:text-primary transition-colors">
+              <a
+                href="#"
+                className="text-background/60 hover:text-primary transition-colors"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-background/60 hover:text-primary transition-colors">
+              <a
+                href="#"
+                className="text-background/60 hover:text-primary transition-colors"
+              >
                 Terms of Service
               </a>
-              <a href="#" className="text-background/60 hover:text-primary transition-colors">
+              <a
+                href="#"
+                className="text-background/60 hover:text-primary transition-colors"
+              >
                 Cookie Policy
               </a>
             </div>
