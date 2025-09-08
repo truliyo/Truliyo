@@ -14,6 +14,7 @@ import Contact from "./components/Contact";
 import Address from "./components/Address";
 import Footer from "./components/Footer";
 import NotFound from "./pages/NotFound";
+import TestimonialsSection from "./components/customerfeedback";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const Index = () => (
     <Media />
     <Blog />
     {/* <Career /> */}
+    <TestimonialsSection />
     <Contact />
     <Address />
     <Footer />
